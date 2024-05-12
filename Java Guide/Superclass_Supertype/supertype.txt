@@ -1,0 +1,30 @@
+Supertype:
+1. A more general concept that refers to a broader type in a type hierarchy.
+2. It may include interfaces or abstract classes that other types (subtypes) implement or extend.
+
+A more general concept that includes both superclasses and interfaces.
+It represents the relationship between broader types and their more specific subtypes.
+
+Example:
+In this example, Vehicle is a supertype (an interface), and Car and Truck are subtypes implementing Vehicle.
+
+// Supertype (interface)
+public interface Vehicle {
+    void drive();
+}
+
+// Subtype (implements the supertype)
+public class Car implements Vehicle {
+    @Override
+    public void drive() {
+        System.out.println("The car drives");
+    }
+}
+
+// Another subtype
+public class Truck implements Vehicle {
+    @Override
+    public void drive() {
+        System.out.println("The truck drives");
+    }
+}

@@ -1,0 +1,20 @@
+@SuperBuilder and @Builder are annotations provided by Lombok that can be used to automatically generate builder classes for your Java classes. The main difference between them is the way they handle inheritance.
+
+1.  @Builder: This annotation generates a builder class that only includes the fields from the class where
+    @Builder is applied. If your class inherits fields from a superclass and you want those fields to be included in the
+    builder, you need to manually include them using the @Builder.Default annotation or by explicitly defining a
+    method in the builder class to set those fields.
+
+    Example:
+
+    @Builder
+    public class BaseClass {
+        private String baseField;
+    }
+
+    @Builder
+    public class ChildClass extends BaseClass {
+        private String childField;
+    }
+
+

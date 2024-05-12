@@ -1,0 +1,16 @@
+UserDetailsService Interface: In Spring Security, UserDetailsService is an interface
+that provides a method to load user data (such as username, password, and authorities) based on a given username.
+This is generally used for authentication purposes.
+The implementation of UserDetailsService can then be used to provide custom authentication logic.
+
+Key Benefits:
+Immutability:
+Using private final ensures that the service is set only once,
+preventing accidental modification and enhancing thread safety.
+
+Dependency Injection:
+By using constructor injection and final,
+the dependency is guaranteed to be provided at runtime, which improves testability and reduces errors.
+
+This pattern helps maintain a clean separation between
+the business logic of user data retrieval and the security configuration that relies on it.

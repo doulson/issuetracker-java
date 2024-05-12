@@ -1,0 +1,13 @@
+In Spring, the @Bean annotation is used to indicate that a method returns an object that should be registered as a bean in the Spring ApplicationContext (the Spring container). Here’s why it's important to use @Bean:
+
+Dependency Injection: It allows the Spring framework to manage the bean's lifecycle, making it available to other components via dependency injection. This simplifies the code and improves modularity.
+Configuration Management: Spring beans configured with @Bean can have their properties easily set up or overridden. This can be helpful in multiple environments (e.g., development vs. production).
+Customization: You can configure or customize the objects when defining them via Java configuration, giving you flexibility with the instantiation process. For instance, setting properties, applying filters, or adding additional behaviors.
+Explicit Configuration: Using the @Bean annotation allows you to explicitly declare the Spring beans and dependencies that you want in your application, making the configuration more readable and testable.
+Alternative to XML: It serves as an alternative to the older XML configuration, allowing you to define your application's configuration directly in Java code.
+
+
+In the case of the PasswordEncoder example you provided:
+
+By annotating the method with @Bean, the BCryptPasswordEncoder instance becomes a managed bean.
+Other Spring-managed components can then automatically obtain this instance by injecting the PasswordEncoder type, helping standardize password encoding across your application.

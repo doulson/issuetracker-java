@@ -1,0 +1,27 @@
+doFilterInternal Method
+
+1.Parameters:
+    request: The incoming HTTP request to be processed.
+    response: The response object to write any changes or status.
+    filterChain: A chain of filters that needs to continue processing the request.
+2.Method Logic:
+    Skipping Auth Routes: The method first checks if the request path is for authentication (/api/v1/auth).
+    If so, the request is passed to the next filter in the chain without further processing since it doesn't require authentication.
+3.Extract Authorization Header:
+    Looks for an Authorization header in the request.
+    If it doesn't start with "Bearer " or is missing entirely, it skips processing and proceeds with the next filter.
+4.Extract JWT Token:
+    If the Authorization header is valid, it extracts the JWT token by removing the "Bearer " prefix.
+5.Extract Username from JWT:
+    The JwtService is used to extract the username (or email) from the token.
+6.Check Authentication:
+    If the username is found and no authentication is already set in the SecurityContextHolder,
+    it means that this user has not been authenticated yet for the current request.
+7.Load User Details:
+    UserDetailsService is used to load user details by username.
+8.Validate JWT:
+    The token is validated against the retrieved user details using jwtService.isTokenValid.
+9.Create Authentication Token:
+    If the token is valid, a UsernamePasswordAuthenticationToken is created with the user's authorities and set in the SecurityContextHolder.
+10.Continue Filter Chain:
+    Finally, the filter passes the request to the next filter in the chain.

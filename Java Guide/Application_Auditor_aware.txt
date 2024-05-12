@@ -1,0 +1,8 @@
+In Java Spring, AuditorAware is an interface used to determine the current auditor of an entity.
+Auditing in this context typically refers to tracking information such as who created or last modified an entity,
+and when. The AuditorAware interface provides a way to dynamically determine the current auditor,
+which could be a user ID, username, or any other identifier.
+
+The purpose of AuditorAware is to allow applications to customize how they determine the current auditor based on
+their specific requirements. For example, an application might determine the current auditor based on the logged-in user,
+a session variable, or some other context.
