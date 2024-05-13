@@ -12,11 +12,11 @@ public class RegistrationRequest {
 
     @NotEmpty(message = "First Name is required")
     @NotBlank(message = "First Name is required")
-    private String firstname;
+    private String firstName;
 
     @NotEmpty(message = "Last Name is required")
     @NotBlank(message = "Last Name is required")
-    private String lastname;
+    private String lastName;
 
     @Email(message = "Email is not well formatted")
     @NotEmpty(message = "Email is mandatory")

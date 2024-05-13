@@ -44,8 +44,8 @@ public class AuthenticationService {
                 // todo - better exception handling
                 .orElseThrow(() -> new IllegalStateException("ROLE USER was not initiated"));
         var user = User.builder()
-                .firstname(request.getFirstname())
-                .lastname(request.getLastname())
+                .firstName(request.getFirstName())
+                .lastName(request.getLastName())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .accountLocked(false)
