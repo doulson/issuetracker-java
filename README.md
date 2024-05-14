@@ -13,7 +13,7 @@
 
 ## Overview
 
-Issue tracker is a full-stack application that enables users to raise issue and discuss solution in the application. It offers features such as user registration, secure email validation, issue tracking (including creation, updating, comment and archiving). The application ensures security using JWT tokens and adheres to best practices in REST API design. The backend is built with Spring Boot 3 and Spring Security 6, while the frontend is developed using React and nextjs for styling and routering.
+Issue Tracker is a full-stack application that enables users to raise issue and discuss solution in the application. It offers features such as user registration, secure email validation, and issue tracking (including creation, updating, comment and archiving). The application ensures security using JWT tokens and adheres to best practices in REST API design. The backend is built with Spring Boot 3 and Spring Security 6, while the front end is developed using React and Nextjs for styling and routering.
 
 ## Features
 
@@ -23,10 +23,10 @@ Issue tracker is a full-stack application that enables users to raise issue and 
 - Issue Track: Users can create, update, comment, and archive their issues.
 
 #### Class diagram
-![Class diagram](screenshots/class-diagram.png)
+![Class diagram](screenshot/class-d.png)
 
 #### Spring security diagram
-![Security diagram](screenshots/security.png)
+![Security diagram](screenshot/security.png)
 
 
 ## Technologies Used
