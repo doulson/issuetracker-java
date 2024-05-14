@@ -31,7 +31,7 @@ Issue Tracker is a full-stack application that enables users to raise issue and 
 
 ## Technologies Used
 
-### Backend ()
+### Backend (issue-tacker-java)
 
 - Spring Boot 3
 - Spring Security 6
@@ -40,7 +40,7 @@ Issue Tracker is a full-stack application that enables users to raise issue and 
 - JSR-303 and Spring Validation
 - Docker
 
-### Frontend (book-network-ui)
+### Frontend (issue-tacker-ui)
 
 - Reactjs
 - Nextjs
