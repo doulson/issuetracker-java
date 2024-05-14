@@ -1,4 +1,4 @@
-# Book Social Network
+# Issue Tracker
 
 ## Table of Contents
 
