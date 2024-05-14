@@ -25,6 +25,11 @@ public class IssueComment extends BaseEntity {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String comment;
 
+    @OneToOne
+    @JoinColumn(name = "comment_id")
+    @JsonIncludeProperties({"id", "comment"})
+    private IssueComment commentId;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     @JsonIncludeProperties({"id", "fullName", "email"})
